@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <div class="audio-info py-0 px-2">
-                <div class="card light-orange audio-box">
+                <div class="card light-orange audio-box" >
                     <div class="card-body py-1 px-2">
                         <h5 class="font-weight-bold">Audio List</h5>    
                         <input type="date" class="date-input mt-2 mb-4" v-model="audioDate" @change="getAudiosDateWise()"> 

@@ -1,103 +1,105 @@
 <template>
-    <div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="dreamit-section-title text-left pb-3">
-                    <h5>User Setting</h5>
-                    {{ userid }} -- {{ usertype }} -- {{ merchantId }}
-                    <div class="em_bar_bg text-left"></div>
+    <div class="card" style="min-height:680px;">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="dreamit-section-title text-left pb-3">
+                        <h5>User Setting</h5>
+                        {{ userid }} -- {{ usertype }} -- {{ merchantId }}
+                        <div class="em_bar_bg text-left"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <form method="POST" id="dreamit-form" @submit.prevent="addUser" class="form-inline">
-                    <div class="from-box">
-                        <input type="text" v-model="fullName" placeholder="Enter Full Name">
-                    </div>
-                    <div class="from-box ml-2">
-                        <input type="text" v-model="username" placeholder="Enter User Name">
-                    </div>
-                    <div class="from-box ml-2">
-                        <input type="text" v-model="password" placeholder="Enter User Password">
-                    </div>
-                    <div class="from-box ml-2">
-                        <select v-model="userlevel" @change="getemployee()">
-                            <option v-if="usertype == 'admin'" value="1">Manager</option>
-                            <option value="0">Employee</option>
-                        </select>
-                    </div>
-                    <div v-if="emp == 1" class="from-box ml-2">
-                        <select v-model="managers">
-                            <option value="0">Select Manager</option>
-                            <option v-for="(mngs,index) in myuserList" :key="index" :value="mngs.user_name">{{ mngs.user_name }}</option>
-                        </select>
-                    </div>
-                    <div class="contact-button text-center ml-2 mb-3">
-                        <button type="submit">Add User</button>
-                    </div>
-                    
-                </form>
-                    <p :class="msgColor">{{ msg }}</p>
-                <br>
-                <table class="table table-bordered table-hovered">
-                    <thead>
-                        <tr>
-                            <th>
-                                Sr. No
-                            </th>
-                            <th>
-                                Full Name
-                            </th>
-                            <th>
-                                Username
-                            </th>
-                            <th>
-                                Status
-                            </th>
-                            <th>
-                                Action  
-                            </th>
-                            <th>
-                                Login Link
-                            </th>
-                        </tr>
+            <div class="row">
+                <div class="col-md-12">
+                    <form method="POST" id="dreamit-form" @submit.prevent="addUser" class="form-inline">
+                        <div class="from-box">
+                            <input type="text" v-model="fullName" placeholder="Enter Full Name">
+                        </div>
+                        <div class="from-box ml-2">
+                            <input type="text" v-model="username" placeholder="Enter User Name">
+                        </div>
+                        <div class="from-box ml-2">
+                            <input type="text" v-model="password" placeholder="Enter User Password">
+                        </div>
+                        <div class="from-box ml-2">
+                            <select v-model="userlevel" @change="getemployee()">
+                                <option v-if="usertype == 'admin'" value="1">Manager</option>
+                                <option value="0">Employee</option>
+                            </select>
+                        </div>
+                        <div v-if="emp == 1" class="from-box ml-2">
+                            <select v-model="managers">
+                                <option value="0">Select Manager</option>
+                                <option v-for="(mngs,index) in myuserList" :key="index" :value="mngs.user_name">{{ mngs.user_name }}</option>
+                            </select>
+                        </div>
+                        <div class="contact-button text-center ml-2 mb-3">
+                            <button type="submit">Add User</button>
+                        </div>
                         
-                    </thead>
-                    <tbody>
-                        <tr v-for="(item,index) in myuserList" :key="index">
-                            <td>{{ index+1 }}</td>
-                            <td>
-                                {{ item.user_fullname }}
-                                <br>
-                                <!-- {{ item._id.$oid }} -->
-                            </td>
-                            <td>
-                                {{ item.user_name }}
-                                <br>
-                                <!-- {{ item._id.$oid }} -->
-                            </td>
-                            <td>
-                                <span v-if="item.user_status == 1" class="badge badge-success">Active</span>
-                                <span v-else class="badge badge-danger">Disabled</span>
-                                <br>
-                                <small><a href="#" class="text-link">Change Status</a></small>
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <router-link title="Edit User" :to="'/edit-user/'+userid+'/'" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt mr-2"></i></router-link>
-                                    <router-link data-toggle="tooltip" title="Check Employees" :to="'/edit-user/'+userid+'/'" class="btn btn-secondary btn-sm"><i class="fa fa-list mr-2"></i></router-link>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#" title="Copy Login Link" class="mr-2 text-dark"  @click='copyme(baseUrl + "/user-login?merchantId="+ merchantId +"&usertype=manager","copy")'><i class="fa fa-copy mr-2"></i></a>
-                                    <a href="#" title="Show Link" @click='copyme(baseUrl +"/user-login?merchantId="+ merchantId +"&usertype="+linktype,"show")'><i class="fa fa-eye mr-2"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    </form>
+                        <p :class="msgColor">{{ msg }}</p>
+                    <br>
+                    <table class="table table-bordered table-hovered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Sr. No
+                                </th>
+                                <th>
+                                    Full Name
+                                </th>
+                                <th>
+                                    Username
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Action  
+                                </th>
+                                <th>
+                                    Login Link
+                                </th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item,index) in myuserList" :key="index">
+                                <td>{{ index+1 }}</td>
+                                <td>
+                                    {{ item.user_fullname }}
+                                    <br>
+                                    <!-- {{ item._id.$oid }} -->
+                                </td>
+                                <td>
+                                    {{ item.user_name }}
+                                    <br>
+                                    <!-- {{ item._id.$oid }} -->
+                                </td>
+                                <td>
+                                    <span v-if="item.user_status == 1" class="badge badge-success">Active</span>
+                                    <span v-else class="badge badge-danger">Disabled</span>
+                                    <br>
+                                    <small><a href="#" class="text-link">Change Status</a></small>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <router-link title="Edit User" :to="'/edit-user/'+userid+'/'" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt mr-2"></i></router-link>
+                                        <router-link data-toggle="tooltip" title="Check Employees" :to="'/edit-user/'+userid+'/'" class="btn btn-secondary btn-sm"><i class="fa fa-list mr-2"></i></router-link>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="#" title="Copy Login Link" class="mr-2 text-dark"  @click='copyme(baseUrl + "/user-login?merchantId="+ merchantId +"&usertype=manager","copy")'><i class="fa fa-copy mr-2"></i></a>
+                                        <a href="#" title="Show Link" @click='copyme(baseUrl +"/user-login?merchantId="+ merchantId +"&usertype="+linktype,"show")'><i class="fa fa-eye mr-2"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

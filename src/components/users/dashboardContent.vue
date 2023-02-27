@@ -27,7 +27,6 @@
 </template>
 
 <script>
-
 Vue.component('barChart', require('./barChart.vue').default);
 Vue.component('pieChart', require('./pieChart.vue').default);
 Vue.component('lineChart', require('./lineChart.vue').default);

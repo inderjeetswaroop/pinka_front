@@ -1,7 +1,7 @@
 <template>
     <div class="row pl-2">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card" style="min-height: 680px;">
                 <div class="card-body">
                     <button data-toggle="collapse" data-target="#demo" class="btn btn-warning my-2"><i class="fa fa-cloud-upload-alt"></i> Upload Audio</button>
                     <div id="demo" class="collapse">
@@ -16,8 +16,6 @@
                             <div class="progress-bar progress-bar-striped progress-bar-animated" :style="uploadprogress"></div>
                         </div>
                     </div>
-                    
-                    
                     <br>
                     <table class="table table-hovered table-bordered">
                         <thead>
@@ -27,6 +25,9 @@
                                 </th>
                                 <th>
                                     Audio Details
+                                </th>
+                                <th>
+                                    Conversion
                                 </th>
                                 <th>
                                     Status
@@ -42,6 +43,9 @@
                                 <td>{{ index + aList._id.$oid}}</td>
                                 <td>{{ aList.file_keyName }} <br>{{ aList.audio_title }} </td>
                                 <!-- <td>{{ /*aList.upload_time.$date*/ }}</td> -->
+                                <td>
+                                    <buttun class="btn btn-warning btn-sm">Converted</buttun>
+                                </td>
                                 <td>
                                     <span v-if="aList.status == 1" class="badge badge-success">Ready</span>
                                     <span v-else class="badge badge-info">In-Queue</span>

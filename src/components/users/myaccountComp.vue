@@ -1,5 +1,5 @@
 <template>
-    <div class="card" style="height:680px">
+    <div class="card" style="min-height:680px;">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4 p-3">
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+
 import Vue from 'vue'
 export default {
     data() { 

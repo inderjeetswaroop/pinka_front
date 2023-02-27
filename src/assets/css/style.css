@@ -38,6 +38,9 @@ Version: 0.1
 /*============================
  datatech	Main Menu Area Css
 ==============================*/
+.fs-16{
+    font-size: 16px;
+}
 .datatech_nav_manu {
     background: transparent;
     transition: .5s;

@@ -7,7 +7,7 @@
                 </div>
                 <div >
                     <div class="text-center ml-3">
-                        <h5 class="font-weight-bold">{{userDetail.user_name}}</h5>    
+                        <h5 class="font-weight-bold fs-16">{{userDetail.user_name}}</h5>    
                         <p >{{usertype}}</p>
                     </div>
                 </div>
@@ -36,21 +36,21 @@
                         </a>
                         <div id="myaccount" class="collapse">
                             <ul class="ml-5">
-                                <li>
+                                <!-- <li>
                                     <p>
                                         <router-link :to="{name:'myaccount'}"> <span class="text-theme">-</span> Manager Info</router-link>
                                     </p>
-                                </li>
+                                </li> -->
                                 <li>
                                     <p>
                                         <router-link :to="{name:'myaccount'}"> <span class="text-theme">-</span> My Account</router-link>
                                     </p>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <p>
                                         <router-link :to="{name:'myaccount'}"> <span class="text-theme">-</span> Password Setting</router-link>
                                     </p>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>    
                             
@@ -134,14 +134,7 @@ export default {
 }
 </script>
 <style scoped>
-.contact-icon i{
-    font-size: 24px;
-    margin-top: 1px;
-    color:#f16722;
-}
-.contact-location{
-    padding: 0;
-}
+
 .dashboard-sidebar{
     background-color: #fff;
     padding: 10px;
