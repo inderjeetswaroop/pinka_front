@@ -33,52 +33,30 @@
         <div class="footer-middle style_two pt-80 pb-3"> 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="widget widgets-company-info">
                             <div class="datatech-logo">
-                                <a class="logo_img" href="index-2.html" title="datatech">
-                                    <img src="assets/images/logo.png" alt="" />
-                                </a>
+                                <router-link :to="{name:'homepage'}" class="logo_img"  title="PInak">
+                                    <img src="/static/logo-2.png" alt="Pinak " />
+                                </router-link>
                             </div>
                             <div class="company-info-desc pr-2">
                                 <p>Lorem ipsum dolor ameter creative consectetur adipielit sed eiusm tempor incididunt awesome and creative demos.</p>
                             </div>
-                            <div class="company_icon">
-                                <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                                <a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a>
-                                <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
+                            
                         </div>					
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="widget widget-nav-menu pl-2">
-                            <h4 class="widget-title pb-4">Useful Links</h4>
-                            <div class="menu-quick-link-content">
-                                <ul class="menu">
-                                    <li><a href="#">Advertising & Marketing</a></li>
-                                    <li><a href="#">Healthcare & Medicine</a></li>
-                                    <li><a href="#">Financials & Banking</a></li>
-                                    <li><a href="#">Travel & Hospitality</a></li>
-                                    <li><a href="#">Media & Entertainment</a></li>
-                                </ul>
+                            <h4 class="widget-title pb-4">Social Links</h4>
+                            <div class="company_icon">
+                                <a href="https://www.facebook.com/profile.php?id=100085772086954"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/Pinak_Ai"><i class="fab fa-twitter"></i></a>
+                                <a href="https://instagram.com/i_am_pinakai?igshid=Zjc2ZTc4Nzk="><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/88950421/admin/"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>	
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="widget widget-nav-menu">
-                            <h4 class="widget-title pb-4">Solutions</h4>
-                            <div class="menu-quick-link-content">
-                                <ul class="menu">
-                                    <li><a href="#">Advertising & Marketing</a></li>
-                                    <li><a href="#">Healthcare & Medicine</a></li>
-                                    <li><a href="#">Financials & Banking</a></li>
-                                    <li><a href="#">Travel & Hospitality</a></li>
-                                    <li><a href="#">Media & Entertainment</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div id="em-recent-post-widget">
                             <div class="single-widget-item">
@@ -97,7 +75,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="footer-bottom-content">
                             <div class="footer-bottom-content-copy">
-                                <p>Copyright © datatech all rights reserved.</p>
+                                <p>Copyright © PAi Innovations all rights reserved.</p>
                             </div>
                         </div>
                     </div>
@@ -105,8 +83,8 @@
                         <div class="footer_buttom_menu">
                             <div class="footer_buttom_menu_inner">
                                 <ul>
-                                    <li><a href="home.html">Terms & Conditions</a></li>
-                                    <li><a href="#.html">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -10,7 +10,7 @@
                             </div>
                             <div class="breatcumb-content-text">
                                 <ul>
-                                    <li><a href="#">home</a> <i class="fas fa-angle-right"></i> <span>Contact Us</span></li>
+                                    <li><router-link :to="{name:'homepage'}">home </router-link> <i class="fas fa-angle-right"></i> <span>Contact Us</span></li>
                                 </ul>
                             </div>	
                         </div>
@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-6 col-sm-12 pr-0">
-                        <div class="contact-address-content">
+                        <div class="contact-address-content" style="background: #f16722;padding: 15px 40px 20px;border-radius: 5px;">
                             <div class="dreamit-section-title white pb-4">
                                 <h5 class="text-white">CONTACT US</h5>
                                 <h2>Company Info</h2>

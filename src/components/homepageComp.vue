@@ -7,12 +7,14 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="slider-content">
-                                    <h1>Turn data into the</h1>
-                                    <h1>insight with survey reports</h1>
-                                    <p>Data-Tech bring the power of data science and artificial intelligence to every business.</p>
+                                    <h1 class="mb-4">Turn Voice into visualization,</h1>
+                                    <h1 class="mb-4">increase your customer satisfaction </h1>
+                                    <h1 class="mb-5">and decrease your customer acquisition</h1>
+                                    <!-- <p>Data-Tech bring the power of data science and artificial intelligence to every business.</p> -->
                                 </div>
                                 <div class="slider-button">
-                                    <a href="#">Contact Us</a>
+                                    <router-link :to="{name:'contact'}">Contact Us</router-link>
+                                    
                                 </div>
                                 <div class="slider-video">
                                     <div class="video-icon">
@@ -66,22 +68,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="em-feature-box1 white">
-                                    <div class="em-feature-box-inner">
-                                        <div class="em-feature-icon">
-                                            <i class="flaticon-clock"></i>
-                                        </div>
-                                        <div class="em-content-text">
-                                            <div class="em-feature-title">
-                                                <h2>Robotic Arm</h2>
-                                            </div>
-                                            <div class="em-feature-desc"><p>Lorem ipsum dolor sit amet consecte tur adipisicing elit. Ipsa libero ab volupta.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="em-feature-box">
                                     <div class="em-feature-box-inner">
                                         <div class="em-feature-icon">
@@ -89,29 +76,14 @@
                                         </div>
                                         <div class="em-content-text">
                                             <div class="em-feature-title">
-                                                <h2>Technology Stack</h2>
+                                                <h2>Core Transcription</h2>
                                             </div>
                                             <div class="em-feature-desc">Lorem ipsum dolor sit amet consecte tur adipisicing elit. Ipsa libero ab volupta.</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="em-feature-box">
-                                    <div class="em-feature-box-inner">
-                                        <div class="em-feature-icon">
-                                            <i class="flaticon-data-analytics"></i>
-                                        </div>
-                                        <div class="em-content-text">
-                                            <div class="em-feature-title">
-                                                <h2>AI Chippest</h2>
-                                            </div>
-                                            <div class="em-feature-desc">Lorem ipsum dolor sit amet consecte tur adipisicing elit. Ipsa libero ab volupta.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="em-feature-box">
                                     <div class="em-feature-box-inner">
                                         <div class="em-feature-icon">
@@ -119,7 +91,7 @@
                                         </div>
                                         <div class="em-content-text">
                                             <div class="em-feature-title">
-                                                <h2>AI integration</h2>
+                                                <h2>Audio Intelligence</h2>
                                             </div>
                                             <div class="em-feature-desc">Lorem ipsum dolor sit amet consecte tur adipisicing elit. Ipsa libero ab volupta.</div>
                                         </div>
@@ -133,81 +105,14 @@
                             <div class="col-lg-12">
                                 <div class="dreamit-section-title">
                                     <h5>FEATURES</h5>
-                                    <h2>Machine Learning To Drive</h2>
-                                    <h2>Intelligent <span>Optimization</span></h2>
-                                    <div class="em_bar_bg text-left"></div>
-                                    <p>How all this mistaken idea of denouncing pleasure and praising born and we will give you a complete. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Data Requirements</div>
-                                    </div>
-                                </div>
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Data Visualization</div>
-                                    </div>
-                                </div>
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Data Collection</div>
-                                    </div>
-                                </div>
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Business Intelligence</div>
-                                    </div>
-                                </div>
-                                <div class="about-button">
-                                    <a href="#">Read More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Initial data analysis</div>
-                                    </div>
-                                </div>
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Digital Processing</div>
-                                    </div>
-                                </div>
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Exploratory Data analysis</div>
-                                    </div>
-                                </div>
-                                <div class="dreamit-icon-box">
-                                    <div class="content-icon">
-                                        <i class="flaticon-tick"></i>
-                                    </div>
-                                    <div class="right-box">
-                                        <div class="content-desc">Modeling & Algorithm</div>
-                                    </div>
+                                    <!-- <div class="em_bar_bg text-left"></div> -->
+                                    <p>Machine learning can drive intelligent optimization by leveraging its ability to identify patterns and make predictions based on data. Specifically, machine learning algorithms can analyze large sets of data to identify trends and insights, and then use this information to optimize various processes and systems.</p>
+                                    <p>
+                                        One example of this is in supply chain optimization. By analyzing data related to production, shipping, and inventory levels, machine learning algorithms can identify patterns and make predictions about future demand. This information can then be used to optimize the supply chain by adjusting production schedules, predicting delivery times, and ensuring that inventory levels are maintained at optimal levels.
+                                    </p>
+                                    <p>
+                                        Another example is in energy management. Machine learning algorithms can analyze data related to energy usage patterns, weather forecasts, and energy prices to make predictions about future energy demand. This information can be used to optimize energy usage by adjusting heating and cooling systems, lighting schedules, and other energy-consuming systems.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -217,64 +122,6 @@
         </div>
         <!--==================================================-->
         <!-- End datatech technology Area -->
-        <!--==================================================-->
-
-        <!--==================================================-->
-        <!-- End datatech about Area -->
-        <!--==================================================-->
-        <div class="about-area style-two pt-50 pb-90">
-            <div class="container">
-                <div class="row pt-40">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="dreamit-about-thumb pr-40">
-                            <img src="static/images/resource/ab3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="row pl-30">
-                            <div class="col-lg-12">
-                                <div class="dreamit-section-title">
-                                    <h5>About Us</h5>
-                                    <h2>We Create Most Realistic</h2>
-                                    <h2>Artificial <span>Intelligence</span></h2>
-                                    <div class="em_bar_bg text-left"></div>
-                                    <p>How all this mistaken idea of denouncing pleasure and praising born and we will give you a complete. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
-                                    <div class="dreamit-icon-box pt-3">
-                                        <div class="content-icon">
-                                            <i class="flaticon-tick"></i>
-                                        </div>
-                                        <div class="right-box">
-                                            <div class="content-desc">Artificial Intelligence is the best technology</div>
-                                        </div>
-                                    </div>
-                                    <div class="dreamit-icon-box">
-                                        <div class="content-icon">
-                                            <i class="flaticon-tick"></i>
-                                        </div>
-                                        <div class="right-box">
-                                            <div class="content-desc">Machine Learning is the best ever.</div>
-                                        </div>
-                                    </div>
-                                    <div class="dreamit-icon-box">
-                                        <div class="content-icon">
-                                            <i class="flaticon-tick"></i>
-                                        </div>
-                                        <div class="right-box">
-                                            <div class="content-desc">Artificial Intelligence is the best technology</div>
-                                        </div>
-                                    </div>
-                                    <div class="about-button">
-                                        <a href="#">Read More <i class="flaticon-right-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--==================================================-->
-        <!-- End datatech about Area -->
         <!--==================================================-->
 
         <!--==================================================-->
@@ -301,7 +148,7 @@
                             </div>
                             <div class="em-process-content1">
                                 <div class="em-process-title">
-                                    <h2>Data Generated</h2>
+                                    <h2>Recorded Audio</h2>
                                     <p>There are many variation of passages of morem.</p>
                                 </div>
                             </div>
@@ -316,7 +163,7 @@
                             </div>
                             <div class="em-process-content1">
                                 <div class="em-process-title">
-                                    <h2>Data Stored</h2>
+                                    <h2>Audio Uploaded</h2>
                                     <p>There are many variation of passages of morem.</p>
                                 </div>
                             </div>
@@ -331,7 +178,7 @@
                             </div>
                             <div class="em-process-content1">
                                 <div class="em-process-title">
-                                    <h2>Data Processing</h2>
+                                    <h2>Data processing</h2>
                                     <p>There are many variation of passages of morem.</p>
                                 </div>
                             </div>
@@ -346,7 +193,7 @@
                             </div>
                             <div class="em-process-content1">
                                 <div class="em-process-title">
-                                    <h2>Actionable Insights</h2>
+                                    <h2>Actionable Insight</h2>
                                     <p>There are many variation of passages of morem.</p>
                                 </div>
                             </div>
@@ -381,7 +228,7 @@
                                     <i class="flaticon-info"></i>
                                 </div>
                                 <div class="em-service-title">
-                                    <h2>Robotics & Drones</h2>
+                                    <h2>Core Transcription</h2>
                                 </div>
                                 <div class="em-service-text">
                                     <p>Porem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
@@ -396,7 +243,7 @@
                                     <i class="flaticon-process"></i>
                                 </div>
                                 <div class="em-service-title">
-                                    <h2>Virtually Reality</h2>
+                                    <h2>Audio Intelligence</h2>
                                 </div>
                                 <div class="em-service-text">
                                     <p>Porem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
@@ -411,10 +258,10 @@
                                     <i class="flaticon-information"></i>
                                 </div>
                                 <div class="em-service-title">
-                                    <h2>Blockchain Project</h2>
+                                    <h2>ERP</h2>
                                 </div>
                                 <div class="em-service-text">
-                                    <p>Porem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
+                                    <p>Lorem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
                                 </div>
                             </div>
                         </div>
@@ -426,7 +273,7 @@
                                     <i class="flaticon-interaction"></i>
                                 </div>
                                 <div class="em-service-title">
-                                    <h2>Image Processing</h2>
+                                    <h2>Lead Management System</h2>
                                 </div>
                                 <div class="em-service-text">
                                     <p>Porem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
@@ -441,7 +288,7 @@
                                     <i class="flaticon-chart"></i>
                                 </div>
                                 <div class="em-service-title">
-                                    <h2>Order Management</h2>
+                                    <h2>Summarizer</h2>
                                 </div>
                                 <div class="em-service-text">
                                     <p>Porem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
@@ -449,21 +296,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="dreamit-service-box3">
-                            <div class="service-box-inner">
-                                <div class="em-service-icon">
-                                    <i class="flaticon-server"></i>
-                                </div>
-                                <div class="em-service-title">
-                                    <h2>Machine Learning</h2>
-                                </div>
-                                <div class="em-service-text">
-                                    <p>Porem ipsum dolor sit amet, consecerm anglse sicing elite sombar, sed do an incididunt awesome services.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -552,324 +385,6 @@
         <!-- End datatech counter Area -->
         <!--==================================================-->
 
-        <!--==================================================-->
-        <!-- Start datatech testimonial Area -->
-        <!--==================================================-->
-        <div class="testimonial-area style-three">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="dreamit-section-title text-center pb-40">
-                            <h5>TESTIMONIALS</h5>
-                            <h2>What Saying Our Customers</h2>
-                            <div class="em_bar_bg text-left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="testimonial_list owl-carousel">
-                        <div class="col-lg-12">
-                            <div class="dreamit-single-testimonial-box">
-                                <div class="testimonial-content">
-                                    <div class="testi-icon">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="testimonial-text">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</div>
-                                </div>
-                                <div class="testimonial-thumb text-center">
-                                    <img src="static/images/resource/testi1.jpg" alt="">
-                                </div>
-                                <div class="testi-titile text-center">
-                                    <h2>Anowar Hossain </h2>
-                                    <span>Robotic Engineer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="dreamit-single-testimonial-box">
-                                <div class="testimonial-content">
-                                    <div class="testi-icon">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="testimonial-text">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</div>
-                                </div>
-                                <div class="testimonial-thumb text-center">
-                                    <img src="static/images/resource/testi1.jpg" alt="">
-                                </div>
-                                <div class="testi-titile text-center">
-                                    <h2>Mehedi Hassan </h2>
-                                    <span>Robotic Engineer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="dreamit-single-testimonial-box">
-                                <div class="testimonial-content">
-                                    <div class="testi-icon">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="testimonial-text">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</div>
-                                </div>
-                                <div class="testimonial-thumb text-center">
-                                    <img src="static/images/resource/testi2.jpg" alt="">
-                                </div>
-                                <div class="testi-titile text-center">
-                                    <h2>Ellen Eyre</h2>
-                                    <span>Manager Of TM</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="dreamit-single-testimonial-box">
-                                <div class="testimonial-content">
-                                    <div class="testi-icon">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="testimonial-text">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</div>
-                                </div>
-                                <div class="testimonial-thumb text-center">
-                                    <img src="static/images/resource/testi3.jpg" alt="">
-                                </div>
-                                <div class="testi-titile text-center">
-                                    <h2>Mike Jonsone</h2>
-                                    <span>Sr. Engineer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--==================================================-->
-        <!-- End datatech testimonial Area -->
-        <!--==================================================-->
-
-        <!--==================================================-->
-        <!-- Start datatech brand Area -->
-        <!--==================================================-->
-        <div class="brand-area style-two pb-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="dreamit-section-title white text-center pb-40">
-                            <h5 class="text-white">SATISFIED CLIENTS</h5>
-                            <h2>Customers We Work For <span></span></h2>
-                            <div class="em_bar_bg text-left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m4.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m5.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m6.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m7.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m8.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-12">
-                        <div class="dreamit-single-brand-thumb1">
-                            <img src="static/images/resource/m9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-            </div>
-        </div>
-        <!--==================================================-->
-        <!-- End datatech brand Area -->
-        <!--==================================================-->
-
-        <!--==================================================-->
-        <!-- Start datatech subscribe Area -->
-        <!--==================================================-->
-        <div class="subscribe-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-6 background-sub">
-                        <div class="dreamit-subscribe-box">
-                            <div class="sub-content-icon">
-                                <i class="flaticon-algorithm"></i>
-                            </div>
-                            <div class="sub-content-title">
-                                <h4>Subscribe Us</h4>
-                                <p>Subscribe to our newsletter & stay updated</p>
-                            </div>
-                            <form class="footer_buttom" action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
-                                <div class="subscribe_form">
-                                    <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Enter Your Email">
-                                    <div class="help-block with-errors"></div>
-                                    <button type="submit" class="btn">
-                                        <span class="arrow flaticon-long-arrow-pointing-to-the-right">Subscribe</span>
-                                    </button>
-                                </div>
-                            </form>
-                            <div id="status"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"></div>
-                </div>
-            </div>
-        </div>
-        <!--==================================================-->
-        <!-- End datatech subscribe Area -->
-        <!--==================================================-->
-
-        <!--==================================================-->
-        <!-- Start datatech Blog Area -->
-        <!--==================================================-->
-        <div class="blog_area pt-95 pb-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="dreamit-section-title text-center pb-40">
-                            <h5>OUR LATEST BLOG</h5>
-                            <h2>What Saying Our Customers</h2>
-                            <div class="em_bar_bg text-left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="blog_list owl-carousel">
-                        <div class="col-lg-12">
-                        <div class="single_blog">
-                            <div class="single_blog_thumb">
-                                <a href="blog-details.html"><img src="static/images/resource/blog1.jpg" alt="" /></a>
-                            </div>
-                            <div class="single_blog_content">
-                                <div class="datatech_blog_meta">
-                                    <a href="#">Datatech <span></span></a>
-                                </div>
-                                <div class="post-categories">
-                                    <a href="#">Machine Learning</a>
-                                </div>
-                                <div class="blog_page_title">
-                                    <h4><a href="blog-details.html">Algorithm Tells Robots and Where Nearby </a></h4>
-                                </div>
-                                <div class="blog_description">
-                                    <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms</p>
-                                </div>
-                                <div class="button_two">
-                                    <a href="blog-details.html">Read More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-12">
-                        <div class="single_blog">
-                            <div class="single_blog_thumb">
-                                <a href="blog-details.html"><img src="static/images/resource/blog2.jpg" alt="" /></a>
-                            </div>
-                            <div class="single_blog_content">
-                                <div class="datatech_blog_meta">
-                                    <a href="#">Datatech <span></span></a>
-                                </div>
-                                <div class="post-categories">
-                                    <a href="#">Data Science</a>
-                                </div>
-                                <div class="blog_page_title">
-                                    <h4><a href="blog-details.html">Algorithm Tells Robots Where Nearby Humans</a></h4>
-                                </div>
-                                <div class="blog_description">
-                                    <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms</p>
-                                </div>
-                                <div class="button_two">
-                                    <a href="blog-details.html">Read More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-12">
-                        <div class="single_blog">
-                            <div class="single_blog_thumb">
-                                <a href="blog-details.html"><img src="static/images/resource/blog3.jpg" alt="" /></a>
-                            </div>
-                            <div class="single_blog_content">
-                                <div class="datatech_blog_meta">
-                                    <a href="#">Datatech <span></span></a>
-                                </div>
-                                <div class="post-categories">
-                                    <a href="#">LOT</a>
-                                </div>
-                                <div class="blog_page_title">
-                                    <h4><a href="blog-details.html">Algorithm Tells Robots Where Nearby Humans</a></h4>
-                                </div>
-                                <div class="blog_description">
-                                    <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms</p>
-                                </div>
-                                <div class="button_two">
-                                    <a href="blog-details.html">Read More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-12">
-                        <div class="single_blog">
-                            <div class="single_blog_thumb">
-                                <a href="blog-details.html"><img src="static/images/resource/blog4.jpg" alt="" /></a>
-                            </div>
-                            <div class="single_blog_content">
-                                <div class="datatech_blog_meta">
-                                    <a href="#">Datatech <span></span></a>
-                                </div>
-                                <div class="post-categories">
-                                    <a href="#">Cloud robotics‎</a>
-                                </div>
-                                <div class="blog_page_title">
-                                    <h4><a href="blog-details.html">Algorithm Tells Robots Where Nearby Humans</a></h4>
-                                </div>
-                                <div class="blog_description">
-                                    <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms</p>
-                                </div>
-                                <div class="button_two">
-                                    <a href="blog-details.html">Read More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--==================================================-->
-        <!-- End datatech Blog Area -->
-        <!--==================================================-->
 
         <!--==================================================-->
         <!-- Start datatech contact us Area -->
@@ -878,7 +393,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-6 col-sm-12">
-                        <div class="contact-address-content">
+                        <div class="contact-address-content" style="background: #f16722;padding: 15px 40px 20px;border-radius: 5px;">
                             <div class="contact-location">
                                 <div class="contact-icon">
                                     <i class="flaticon-data-2"></i>
@@ -930,7 +445,7 @@
                             <div class="col-lg-12">
                                 <div class="dreamit-section-title pb-3">
                                     <h5>CONTACT US</h5>
-                                    <h2>Get In Touch</h2>
+                                    <h2>Let’s improve the efficiency, efficacy and cost.</h2>
                                     <div class="em_bar_bg text-left"></div>
                                     <p class="text-st">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt consectetuer adipiscing.</p>
                                 </div>
