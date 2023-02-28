@@ -9,7 +9,7 @@ import VueAxios from 'vue-axios'
 import VueSession from 'vue-session'
 import VueMeta from 'vue-meta'
 
-Vue.prototype.$flask_api_link = 'http://127.0.0.1:5000'
+Vue.prototype.$flask_api_link = 'http://pinakpython-env.eba-pmdnujup.us-east-1.elasticbeanstalk.com'
 
 
 Vue.config.productionTip = false
