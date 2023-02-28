@@ -9,7 +9,7 @@ import VueAxios from 'vue-axios'
 import VueSession from 'vue-session'
 import VueMeta from 'vue-meta'
 
-Vue.prototype.$flask_api_link = 'http://pinakpython-env.eba-pmdnujup.us-east-1.elasticbeanstalk.com'
+Vue.prototype.$flask_api_link = 'https://frontend-api.pinak.cloud'
 
 
 Vue.config.productionTip = false
