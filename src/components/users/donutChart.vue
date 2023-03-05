@@ -27,66 +27,61 @@
   
   export default defineComponent({
     name: 'HelloWorld',
+    props:["productivity"],
     components: {
       VChart,
     },
     provide: {
       [THEME_KEY]: 'light',
     },
-    setup() {
-      const option = ref({
-        title: {
-        /* text: 'EMPLOYEE/CUSTOMER SENTIMENT PRODUCTIVITY',
-        left: 'center', */
+    computed: {
+      option(){
+        return {
+            title: {
+            /* text: 'EMPLOYEE/CUSTOMER SENTIMENT PRODUCTIVITY',
+            left: 'center', */
+          },
+      tooltip: {
+        trigger: 'item'
       },
-  tooltip: {
-    trigger: 'item'
-  },
-  legend: {
-    bottom: '10%',
-    left: 'center',
+      legend: {
+        bottom: '10%',
+        left: 'center',
 
-  },
-  // backgroundColor:'#000',
-  series: [
-
-    {
-      name: 'Productivity',
-      type: 'pie',
-      radius: ['40%', '70%'],
-      avoidLabelOverlap: false,
-      label: {
-        show: false,
-        position: 'center'
       },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: 20,
-          fontWeight: 'bold'
+      // backgroundColor:'#000',
+      series: [
+
+        {
+          name: 'Productivity',
+          type: 'pie',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 20,
+              fontWeight: 'bold'
+            }
+          },
+          labelLine: {
+            show: false
+          },
+          label: {
+            show: true,
+            position: 'inside'
+          },
+          data: this.productivity
         }
-      },
-      labelLine: {
-        show: false
-      },
-      label: {
-        show: true,
-        position: 'inside'
-      },
-      data: [
-        { value: 1048, name: 'Speaking Time',itemStyle: {
-                    color: '#fab2c0'
-                  } },
-        { value: 735, name: 'Listening Time',itemStyle: {
-                    color: '#ffd97f'
-                  } },
-        
       ]
     }
-  ]
-});
+      }
   
-      return { option };
+      
     },
   });
   </script>

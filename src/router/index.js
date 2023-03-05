@@ -5,9 +5,14 @@ Vue.use(Router)
 
 const routes = [
       {
+        path: '/homepage-old',
+        name: 'homepage-old',
+        component: ()=>  import(/* webpackChunkName: 'testyrl'*/ "@/components/homepageComp"),
+      },
+      {
         path: '/',
         name: 'homepage',
-        component: ()=>  import(/* webpackChunkName: 'testyrl'*/ "@/components/homepageComp"),
+        component: ()=>  import(/* webpackChunkName: 'testyrl'*/ "@/components/homeComp"),
       },
       {
         path: '/about-us',

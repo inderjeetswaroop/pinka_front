@@ -1,5 +1,6 @@
 <template>
     <div>
+      <!-- {{ emaotions }} -->
       <v-chart class="chart" :option="option" autoresize />
     </div>
   </template>
@@ -26,6 +27,7 @@
   ]);
   
   export default defineComponent({
+    props:["emaotions"],
     name: 'HelloWorld',
     components: {
       VChart,
@@ -33,8 +35,10 @@
     provide: {
       [THEME_KEY]: 'light',
     },
-    setup() {
-      const option = ref({
+    
+    computed:{
+      option(){
+        return {
         title: {
           // text: 'EMPLOYEE/CUSTOMER EMOTIONS',
           left: 'center',
@@ -50,16 +54,7 @@
             type: 'pie',
             radius: '55%',
             center: ['50%', '60%'],
-            data: [
-              { value: 335, name: 'Anger' },
-              { value: 130, name: 'Disapproval' },
-              { value: 23, name: 'Amusement' },
-              { value: 50, name: 'Caring' },
-              { value: 60, name: 'Question' },
-              { value: 140, name: 'Fear' },
-              { value: 200, name: 'Admiration' },
-              { value: 55, name: 'Approval' },
-            ],
+            data: this.emaotions,
             emphasis: {
               itemStyle: {
                 shadowBlur: 10,
@@ -69,10 +64,9 @@
             },
           },
         ],
-      });
-  
-      return { option };
-    },
+      }
+      }
+    }
   });
   </script>
   

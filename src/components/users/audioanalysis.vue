@@ -5,9 +5,9 @@
                 <div class="card light-orange audio-box" >
                     <div class="card-body py-1 px-2">
                         <h5 class="font-weight-bold">Audio List</h5>    
-                        <input type="date" class="date-input mt-2 mb-4" v-model="audioDate" @change="getAudiosDateWise()"> 
+                        <input type="date" class="date-input mt-2 mb-4" v-model="audioDate" @change="getAudiosDateWise"> 
                         <ul>
-                            <li v-for="(audios,index) in audioListDate" :key="index" :class="index == 0 ? 'selectedaudion' : ''">
+                            <li v-for="(audios,index) in audioListDate" :key="index" >
                                 <a :class="index == 0 ? '' : 'text-secondary'" href="#" @click="getaudioInfo(audios._id.$oid)">
                                     <p>
                                         {{ index+1 +" - "+ audios.audio_title}}
@@ -46,25 +46,25 @@
                                 <div class="col-md-3">
                                     <p class="text-black">Sentiment Analysis</p>
                                     <div class="dropdown mt-n2">
-                                        <select v-model="sentiments" class="theme-btn">
+                                        <select v-model="sentiments" class="theme-btn" @change="getspeaker">
                                             <option  v-for="(speakers,index) in audiosDetail.speakers_list" :key="index" :value="speakers" >{{ speakers}}</option>
-                                            <option value="all">All Speakers</option>
+                                            <!-- <option value="all">All Speakers</option> -->
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p class="text-black">Emotion Analysis</p>
                                     <div class="dropdown mt-n2">
-                                        <select v-model="emotions" class="theme-btn">
+                                        <select v-model="sentiments" class="theme-btn" @change="getspeaker">
                                             <option  v-for="(speakers,index) in audiosDetail.speakers_list" :key="index" :value="speakers" >{{ speakers}}</option>
-                                            <option value="all">All Speakers</option>
+                                            <!-- <option value="all">All Speakers</option> -->
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <p class="text-black">Productivity Analysis</p>
                                     <div class="dropdown mt-n2">
-                                        <select v-model="productivity" class="theme-btn">
+                                        <select v-model="sentiments" class="theme-btn" @change="getspeaker">
                                             <option  v-for="(speakers,index) in audiosDetail.speakers_list" :key="index" :value="speakers" >{{ speakers}}</option>
                                         </select>
                                     </div>
@@ -72,30 +72,36 @@
                                 <div class="col-md-3">
                                     <p class="text-black">Text Analysis</p>
                                     <div class="dropdown mt-n2">
-                                        <button type="button" class="theme-btn dropdown-toggle" data-toggle="dropdown">
-                                            Speaker Wise Text Analysis
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#"> Full Audio Text <i class="fa fa-cloud-download-alt float-right ml-2 mt-1"></i> </a>
-                                            <a class="dropdown-item" href="#"> Speaker wise Sentiment Text  </a>
-                                            <a class="dropdown-item" href="#"> Summerization <i class="fa fa-cloud-download-alt float-right ml-2 mt-1"></i> </a>
+                                        <div class="dropdown mt-n2">
+                                            <select v-model="audioTextType" class="theme-btn" @change="getaudiostextinfo">
+                                                <option value="0">Select Audio Text Option</option>
+                                                <option  value="1" >Full Audio Text <i class="fa fa-cloud-download-alt float-right ml-2 mt-1"></i></option>
+                                                <option  value="2" >Speaker wise Sentiment Text </option>
+                                                <option  value="3" >Speaker wise Emotion Text </option>
+                                                <option  value="4" >Summerization <i class="fa fa-cloud-download-alt float-right ml-2 mt-1"></i></option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div v-if="showtext == 1" class="text-area mt-5">
+                                <div class="py-3 px-2">
+                                    <textViews :audiodata="audioText" :texttype="textType" />
+                                </div>
+                            </div>
                             <hr>
-                            <div class="row mt-5">
+                            <div v-if="showtext == 0" class="row mt-5">
                                 <div class="col-md-4">
                                     <h4 class="text-black">Sentiment Analysis</h4>
-                                    <barChart></barChart>
+                                    <barChart :sentis="sentis"  ></barChart>
                                 </div>
                                 <div class="col-md-4">
                                     <h4 class="text-black">Emotions Analysis</h4>
-                                    <pieChart />
+                                    <pieChart :emaotions="emoti" />
                                 </div>
                                 <div class="col-md-4">
                                     <h4 class="text-black">Productivity Analysis</h4>
-                                    <donutChart />
+                                    <donutChart :productivity="protis" />
                                 </div>
                             </div>
                             <br><br>
@@ -112,11 +118,13 @@
 Vue.component('barChart', require('./barChart.vue').default);
 Vue.component('pieChart', require('./pieChart.vue').default);
 Vue.component('donutChart', require('./donutChart.vue').default);
+Vue.component('textViews', require('./audioTextViewComp.vue').default);
 import Vue from 'vue'
 
 export default {
     data() { 
         return{
+            
             audiosDetail:{},
             aid:"",
             merchantId:"",
@@ -125,7 +133,14 @@ export default {
             audioListDate:{},
             productivity:0,
             sentiments:0,
-            emotions:0
+            emotions:0,
+            sentis:{},
+            emoti:{},
+            protis:{},
+            showtext:1,
+            audioTextType:0,
+            audioText:{},
+            textType:0,
         }
     },
      beforeCreate(){
@@ -147,12 +162,37 @@ export default {
                 .then((data) =>{
                     // console.log(data.data);
                     this.audiosDetail = data.data
-                    for(var speakerswise in this.audiosDetail.speakers_sentiments_wise_counts){
-                        this.sentiments = speakerswise
-                        this.emotions = speakerswise
-                        this.productivity = speakerswise
-                        break
+                    this.sentiments = this.audiosDetail.speakers_list[0]
+                    this.emotions = this.audiosDetail.speakers_list[0]
+                    this.productivity = this.audiosDetail.speakers_list[0]
+                    this.sentis = this.audiosDetail.speakers_sentiments_wise_counts.SPEAKER_00
+                    this.emoti1 = this.audiosDetail.speakers_emotions_wise_counts.SPEAKER_00
+                    var emotis = []
+                    for(let key in this.emoti1){ 
+                        emotis.push({"value":this.emoti1[key],"name":key})
+                        // console.log(key + " -- "+ this.emoti1[key])
                     }
+                    this.emoti = emotis
+                    // console.log(emotis)
+                    // productivity
+                    var allprod = 0
+                    var prod00 = this.audiosDetail.productive_time_speaker_wise.SPEAKER_00
+                    var prod1 = this.audiosDetail.productive_time_speaker_wise
+                    for( var prods2 in prod1){
+                        allprod = allprod + prod1[prods2]
+                    }
+                    
+                    this.protis =  [
+                        { value: prod00, name: 'Speaking Time',itemStyle: {
+                                    color: '#fab2c0'
+                                } },
+                        { value: allprod - prod00, name: 'Listening Time',itemStyle: {
+                                    color: '#ffd97f'
+                                } }
+                    ]
+                    // productivity
+                            
+                    
                 })
                 .catch(error => {
                     console.log(this.error);
@@ -175,10 +215,10 @@ export default {
                 formdata.append("audioDate",this.audioDate);
                 formdata.append("merch_id",this.merchantId);
                 formdata.append("usertype",this.userType);
-                
+                // console.log(this.audioDate)
                 Vue.axios.post(this.$flask_api_link+"/audio-list-by-date",formdata)
                 .then((data) =>{
-                    console.log(data.data);
+                    // console.log(data.data);
                     this.audioListDate = data.data
                 })
                 .catch(error => {
@@ -187,6 +227,7 @@ export default {
                 })
         },
         getaudioInfo(str){
+                
                 const formdata = new FormData();
                 formdata.append("username",this.userid);
                 formdata.append("audioId",str);
@@ -197,15 +238,71 @@ export default {
                 .then((data) =>{
                     // console.log(data.data);
                     this.audiosDetail = data.data
+                    this.sentiments = this.audiosDetail.speakers_list[0]
+                    this.emotions = this.audiosDetail.speakers_list[0]
+                    this.productivity = this.audiosDetail.speakers_list[0]
+                    this.sentis = this.audiosDetail.speakers_sentiments_wise_counts.SPEAKER_00
+                    this.emoti1 = this.audiosDetail.speakers_emotions_wise_counts.SPEAKER_00
+                    var emotis = []
+                    for(let key in this.emoti1){ 
+                        emotis.push({"value":this.emoti1[key],"name":key})
+                        // console.log(key + " -- "+ this.emoti1[key])
+                    }
+                    this.emoti = emotis
+                    
                     
                 })
                 .catch(error => {
                     console.log(this.error);
                     
                 })
+        },
+        getspeaker() {
+            this.showtext=0
+                    this.sentis = this.audiosDetail.speakers_sentiments_wise_counts[this.sentiments]
+                    this.emoti1 = this.audiosDetail.speakers_emotions_wise_counts[this.sentiments]
+                    var emotis = []
+                    for(let key in this.emoti1){ 
+                        emotis.push({"value":this.emoti1[key],"name":key})
+                        // console.log(key + " -- "+ this.emoti1[key])
+                    }
+                    this.emoti = emotis
+                    // productivity
+                    var allprod = 0
+                    var prod00 = this.audiosDetail.productive_time_speaker_wise[this.sentiments]
+                    var prod1 = this.audiosDetail.productive_time_speaker_wise
+                    for( var prods2 in prod1){
+                        allprod = allprod + prod1[prods2]
+                    }
+                    
+                    this.protis =  [
+                        { value: prod00, name: 'Speaking Time',itemStyle: {
+                                    color: '#fab2c0'
+                                } },
+                        { value: allprod - prod00, name: 'Listening Time',itemStyle: {
+                                    color: '#ffd97f'
+                                } }
+                    ]
+                    // productivity
+            console.log(this.audiosDetail.speakers_sentiments_wise_counts[this.sentiments].positive)
+            console.log(this.sentiments)
+        },
+        getaudiostextinfo(){
+            
+            if (this.audioTextType == 2) {
+                this.showtext=1
+                this.textType = 2    
+                this.audioText = this.audiosDetail.speakers_sentiments_wise_data
+                console.log(this.audioText)
+
+            }
+            else{
+                this.showtext=0
+            }
+            
         }
-    }
-    
+
+    },
 
 }
 </script>
@@ -223,7 +320,7 @@ ul li.selectedaudion{
     border-radius: 10px;
     padding: 10px;
 }
-ul li.selectedaudion a{
+ul li.selectedaudion a:active{
     color:white;
 }
 p{

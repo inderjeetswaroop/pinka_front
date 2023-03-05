@@ -25,7 +25,7 @@ use([
 ]);
 
 export default defineComponent({
-  props:[""],
+  props:["sentis"],
   name: 'HelloWorld',
   components: {
     VChart,
@@ -34,8 +34,10 @@ export default defineComponent({
     [THEME_KEY]: 'light',
     
   },
-  setup() {
-    const option = ref({
+  computed:{
+    option(){
+        return {
+          
       title: {
         // text: 'EMPLOYEE/CUSTOMER SENTIMENTS',
         left: 'center',
@@ -67,18 +69,24 @@ export default defineComponent({
           },
             data: [ 
               {
-                  value: 120,
+                  value: this.sentis.positive,
                   itemStyle: {
                     color: '#4f963c'
                   }
                 },
               {
-                value: 200,
+                value: this.sentis.negative,
                 itemStyle: {
                   color: '#c2233d'
                 }
               },
-              150
+              {
+                value: this.sentis.neutral,
+                itemStyle: {
+                  color: '#37a2da'
+                }
+              },
+              
             ],
             type: 'bar',
             showBackground: true,
@@ -90,13 +98,13 @@ export default defineComponent({
             }
           }
         ]
-    });
-
-    return { option };
-  },
-  created() {
     
+        }
+    }
+     
   }
+  
+  
 });
 </script>
 

@@ -24,8 +24,9 @@
                                     Sr. No.
                                 </th>
                                 <th>
-                                    Audio Details
+                                    Audio Title
                                 </th>
+                                
                                 <th>
                                     Conversion
                                 </th>
@@ -44,7 +45,7 @@
                                 <td>{{ aList.file_keyName }} <br>{{ aList.audio_title }} </td>
                                 <!-- <td>{{ /*aList.upload_time.$date*/ }}</td> -->
                                 <td>
-                                    <buttun class="btn btn-warning btn-sm">Converted</buttun>
+                                    <button class="btn btn-warning btn-sm">Insert Data</button>
                                 </td>
                                 <td>
                                     <span v-if="aList.status == 1" class="badge badge-success">Ready</span>
@@ -86,9 +87,6 @@ export default {
     },
      beforeCreate(){
         this.$Progress.start();
-
-        
-        
     },
     created(){
         this.userid = this.$session.get("userId"); 

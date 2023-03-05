@@ -10,7 +10,7 @@ import VueSession from 'vue-session'
 import VueMeta from 'vue-meta'
 
 Vue.prototype.$flask_api_link = 'https://frontend-api.pinak.cloud'
-
+// Vue.prototype.$flask_api_link = 'http://127.0.0.1:5000'
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)

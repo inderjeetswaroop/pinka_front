@@ -43,7 +43,6 @@ export default {
 <style>
   @import './assets/css/style.css';
   @import './assets/css/bootstrap.min.css';
-  @import './assets/css/owl.carousel.min.css';
   @import './assets/css/nivo-slider.css';
   @import './assets/css/animate.css';
   @import './assets/css/animated-text.css';
