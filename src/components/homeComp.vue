@@ -118,16 +118,19 @@
                         <div class="dreamit-section-title text-left">
                             <h2><span>ABOUT US</span></h2>
                             <div class="em_bar_bg"></div>
-                            <p>How all this mistaken idea of denouncing pleasure and praising born and we will give you a complete. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
+                            <p>We are an AI-based start-up providing a range of products and solutions in Core Transcription, Language Translation, Audio Intelligence, ERP, and LMS.</p>
+                            <h5 class="mt-4">Fields we are working in? </h5>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
+                        
+                        
                         <div class="dreamit-icon-box">
                             <div class="content-icon">
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Data Requirements</div>
+                                <div class="content-desc">Automation</div>
                             </div>
                         </div>
                         <div class="dreamit-icon-box">
@@ -135,7 +138,7 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Data Visualization</div>
+                                <div class="content-desc">Chatbots</div>
                             </div>
                         </div>
                         <div class="dreamit-icon-box">
@@ -143,7 +146,7 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Data Collection</div>
+                                <div class="content-desc">Supply Chain optimization</div>
                             </div>
                         </div>
                         <div class="dreamit-icon-box">
@@ -151,7 +154,15 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Business Intelligence</div>
+                                <div class="content-desc">Personalization</div>
+                            </div>
+                        </div>
+                        <div class="dreamit-icon-box">
+                            <div class="content-icon">
+                                <i class="flaticon-tick"></i>
+                            </div>
+                            <div class="right-box">
+                                <div class="content-desc">Marketing</div>
                             </div>
                         </div>
                         <div class="about-button">
@@ -165,7 +176,7 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Initial data analysis</div>
+                                <div class="content-desc">Fraud detection</div>
                             </div>
                         </div>
                         <div class="dreamit-icon-box">
@@ -173,7 +184,7 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Digital Processing</div>
+                                <div class="content-desc">Core Transcription</div>
                             </div>
                         </div>
                         <div class="dreamit-icon-box">
@@ -181,7 +192,7 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Exploratory Data analysis</div>
+                                <div class="content-desc">Audio Intelligence</div>
                             </div>
                         </div>
                         <div class="dreamit-icon-box">
@@ -189,7 +200,15 @@
                                 <i class="flaticon-tick"></i>
                             </div>
                             <div class="right-box">
-                                <div class="content-desc">Modeling & Algorithm</div>
+                                <div class="content-desc">Summarizer</div>
+                            </div>
+                        </div>
+                        <div class="dreamit-icon-box">
+                            <div class="content-icon">
+                                <i class="flaticon-tick"></i>
+                            </div>
+                            <div class="right-box">
+                                <div class="content-desc">Translation</div>
                             </div>
                         </div>
                     </div>
@@ -350,7 +369,7 @@
        <!--==================================================-->
 <!--Start datatech testimonial Area -->
 <!--==================================================-->
-<div class="testimonial-area">
+<!-- <div class="testimonial-area">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-sm-12">
@@ -442,7 +461,7 @@
 			</carousel>
 		</div>
 	</div>
-</div>
+</div> -->
 <!--==================================================-->
 <!-- End datatech testimonial Area -->
 <!--==================================================-->
